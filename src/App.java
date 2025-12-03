@@ -57,7 +57,7 @@ public class App {
         for (i = N - 1; i > 0; i--) { // El actual toma el valor del anterior
             if (i == fin) {
                 numero[i] = aux; // El valor que se guarda en el final es el original
-            } else if (numero[i] > inicio && numero[i] < fin) {
+            } else if (numero[i] > inicio && numero[i] <= fin) {
                 numero[i] = numero[i];
             } else {
 
@@ -83,5 +83,6 @@ public class App {
         for (i = 0; i < N; i++) {
             System.out.printf("|%3d ", numero[i]);
         }
+        System.out.println("|");
     }
 }
