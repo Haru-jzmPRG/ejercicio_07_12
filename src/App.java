@@ -4,6 +4,7 @@ public class App {
         int[] numero = new int[N];
         int i;
 
+        System.out.println("Introduzca 10 números separados por INTRO: ");
         for (i = 0; i < N; i++) {
             numero[i] = Integer.parseInt(System.console().readLine());
         }
@@ -13,13 +14,11 @@ public class App {
         }
         System.out.println("|");
 
-        // Línea separadora
         for (i = 0; i < N * 5; i++) {
             System.out.print("-");
         }
         System.out.println("-");
 
-        // Imprime los valores guardados en el array
         for (i = 0; i < N; i++) {
             System.out.printf("|%3d ", numero[i]);
         }
@@ -30,19 +29,16 @@ public class App {
 
         System.out.println("Array original");
 
-        // Imprime los índices del array
         for (i = 0; i < N; i++) {
             System.out.printf("|%3d ", i);
         }
         System.out.println("|");
 
-        // Línea separadora
         for (i = 0; i < N * 5; i++) {
             System.out.print("-");
         }
         System.out.println("-");
 
-        // Imprime los valores guardados en el array
         for (i = 0; i < N; i++) {
             System.out.printf("|%3d ", numero[i]);
         }
@@ -54,32 +50,28 @@ public class App {
         int aux2 = numero[N - 1];
         numero[inicio] = numero[inicio - 1];
 
-        for (i = N - 1; i > 0; i--) { // El actual toma el valor del anterior
+        for (i = N - 1; i > 0; i--) { 
             if (i == fin) {
-                numero[i] = aux; // El valor que se guarda en el final es el original
-            } else if (numero[i] > inicio && numero[i] <= fin) {
+                numero[i] = aux; 
+            } else if (i > inicio && i <= fin) {
                 numero[i] = numero[i];
             } else {
 
                 numero[i] = numero[i - 1];
-            } // El valor que se guarda en el final es el original
+            } 
         }
+        numero[0] = aux2; 
 
-        numero[0] = aux2; // El valor que se guarda en el inicio es el original1
-
-        // Imprime los índices del array
         for (i = 0; i < N; i++) {
             System.out.printf("|%3d ", i);
         }
         System.out.println("|");
 
-        // Línea separadora
         for (i = 0; i < N * 5; i++) {
             System.out.print("-");
         }
         System.out.println("-");
 
-        // Imprime los valores guardados en el array
         for (i = 0; i < N; i++) {
             System.out.printf("|%3d ", numero[i]);
         }
